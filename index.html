@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Tracker</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://4fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="jumbotron text-center">
+    <h1>Welcome to My Project Tracker</h1>
+    <p id="current-time">Loading time...</p>
+</header>
+<div class="container">
+    <div class="card mb-5">
+        <div class="card-body">
+            <h5 class="card-title">Instructions</h5>
+            <p class="card-text">Here's how to use this app:</p> 
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#projectModal">Add Project</button>
+        </div>
+    </div>
+    <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="projectModalLabel">Add Project</h5>
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="project-form">
+                        <div class="mb-3">
+                            <label for="project-name" class="form-label">Project Name</label>
+                            <input type="text" class="form-control" id="project-name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="project-type" class="form-label">Project Type</label>
+                            <select class="form-control" id="project-type">
+                                <option value="Web Development">Web Development</option>
+                                <option value="Mobile Development">Mobile Development</option>
+                                <option value="Data Analysis">Data Analysis</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="project-due" class="form-label">Due Date</label>
+                            <input type="date" class="form-control" id="project-due" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Add</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Project Name</th>
+                <th scope="col">Project Type</th>
+                <th scope="col">Due Date</th>
+                <th scope="col">Actions</th> 
+            </tr>
+        </thead>
+        <tbody id="project-table">
+
+        </tbody>
+    </table>
+</div>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+</html>
