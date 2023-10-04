@@ -1,4 +1,8 @@
 var projectFormEl = $('#project-form');
+var currentTime = $('#current-time');
+var btn = $('.btn');
+var modal = $('#projectModal');
+// var input = $('projectModal');
 
 projectFormEl.on('click', 'button', function (event) {
     var projectName;
@@ -32,5 +36,11 @@ setInterval(updateTime, 1000);
 
 function updateTime() {
     var date = dayjs().format();
-    console.log(date);
+    currentTime.text(date);
+}
+
+//Modal 
+function showModal() {
+    modal.style.display = "block";
+    console.log("display modal");
 }
